@@ -10,6 +10,7 @@ export class ChatEngine {
 	chat: any = {};
 
 	constructor() {
+		// @ts-ignore
 		this.instance = ChatEngineCore.create(
 			{
 				publishKey: 'pub-c-f2984d71-0492-447a-90e3-cdaa08935790',
@@ -19,7 +20,9 @@ export class ChatEngine {
 				debug: true,
 				globalChannel: 'chat-engine-angular2-simple'
 			});
+		// @ts-ignore
 		this.create = ChatEngineCore.create.bind(this);
+		// @ts-ignore
 		this.plugin = ChatEngineCore.plugin;
 	}
 }
